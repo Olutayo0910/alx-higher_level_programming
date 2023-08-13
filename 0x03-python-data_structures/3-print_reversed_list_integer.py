@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
     for nums in reversed(my_list):
-        print(nums)
+        print("{:d}".format(nums))
