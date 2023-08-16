@@ -23,4 +23,4 @@ listint_t *reverse_list(listint_t **slow, listint_t *prev_slow);
 void restore_list(listint_t *second_half,
 		listint_t *slow, listint_t *prev_slow);
 
-#endif /* LIST_H */
+#endif
