@@ -50,21 +50,21 @@ Test string:
     >>> add_integer(4, "sum")
     Traceback (most recent call last):
         ...
-    TypeError: b must be integers or floats.
+    TypeError: b must be an integer
 
 Test string2:
 
     >>> add_integer("sum", 4)
     Traceback (most recent call last):
         ...
-    TypeError: a must be integers or floats.
+    TypeError: a must be an integer
 
 Test for None:
 
     >>> add_integer(None)
     Traceback (most recent call last):
         ...
-    TypeError: a and b must be integers or floats.
+    TypeError: a must be an integer
 
 Test for double float:
 
