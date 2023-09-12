@@ -13,6 +13,7 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
+        """integer validator"""
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
@@ -20,9 +21,10 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
+    """Rectangle class"""
     def __init__(self, width, height):
         """initialise width and height"""
         self.integer_validator("width", width)
         self.__width = width
         self.integer_validator("height", height)
-        self.height = height
+        self.__height = height
