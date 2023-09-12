@@ -4,7 +4,7 @@
 
 def inherits_from(obj, a_class):
     """
-    Checks  if the object is an instance of a class 
+    Checks  if the object is an instance of a class
     that inherited (directly or indirectly) from the specified class
     :param obj: The object to check.
     :param a_class: The class to compare with.
