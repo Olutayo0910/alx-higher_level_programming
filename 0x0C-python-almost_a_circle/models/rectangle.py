@@ -4,8 +4,22 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """Represent a rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialize a new Rectangle.
+        Args:
+            width: The width of the new Rectangle.
+            height: The height of the new Rectangle.
+            x (int): The x coordinate of the new Rectangle.
+            y (int): The y coordinate of the new Rectangle.
+            id (int): The identity of the new Rectangle.
+        Raises:
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0.
+        """
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -86,7 +100,16 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Assigns arguments to attributes in the order:
-        id, width, height, x, y"""
+        id, width, height, x, y
+        Args:
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
         if args and len(args) != 0:
             if len(args) >= 1:
                 self.id = args[0]
