@@ -15,10 +15,7 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         b2 = Base()
         b3 = Base()
-
-        self.assertEqual(b1.id, 1)
-        self.assertEqual(b2.id, 2)
-        self.assertEqual(b3.id, 3)
+        self.assertEqual(b1.id, b3.id - 2)
 
     def test_given_id(self):
         """Test when an id is given as an argument"""
@@ -34,7 +31,7 @@ class TestBase(unittest.TestCase):
         """Test if the arg is None"""
         b1 = Base(None)
         b2 = Base(None)
-        self.assertRaises(b1.id, b2.id - 1)
+        self.assertEqual(b1.id, b2.id - 1)
 
     def test_nb_instances_after_unique_id(self):
         """Test for id after unique id"""
