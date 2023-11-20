@@ -17,7 +17,7 @@ if __name__ == '__main__':
     session = InstSession()
 
     states = session.query(State).filter(State.id == 2)
-    for element in state:
+    for element in states:
         element.name = 'New Mexico'
 
     session.commit()
