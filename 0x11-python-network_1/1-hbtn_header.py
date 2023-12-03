@@ -5,14 +5,9 @@ displays the value of the X-Request-Id variable found in the header
 of the response.
 """
 import urllib.request
-import sys
+from sys import argv
 
 
-if __name__ == "__main__":
-    url = sys.argv[1]
-
-    with urllib.request.urlopen('url') as response:
-        header = response.info()
-
-        if 'X-Request-Id' in header:
-            print(header['X-Request-Id'])
+if len(argv) > 1:
+    with urllib.request.urlopen(argv[1]) as response:
+        print(response.getheader("X-Request-Id"))
